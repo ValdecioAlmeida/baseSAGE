@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+   <?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.algaworks</groupId>
@@ -21,7 +24,7 @@
         
         <flyway-maven-plugin.version>4.0.2</flyway-maven-plugin.version>
         
-        <spring-framework.version>4.3.0.RELEASE</spring-framework.version>
+        <spring-framework.version>5.3.0</spring-framework.version>
         
         <servlet.version>3.1.0</servlet.version>
         
@@ -47,6 +50,31 @@
         <!-- Jackson - JSON -->
         <jackson-core.version>2.7.5</jackson-core.version>
         
+        <!-- thumbnailator - Gerar Thumbnail  -->
+        <!-- https://github.com/coobird/thumbnailator -->
+        <thumbnailator.version>0.4.8</thumbnailator.version>
+        
+        <!-- thymeleaf extras data attribute -->
+        <thymeleaf-extras-data-attribute.version>2.0.1</thymeleaf-extras-data-attribute.version>
+        
+        <!-- JUnit -->
+	<junit.version>4.12</junit.version>
+        
+        <!-- Java Mail -->
+	<javax.mail.version>1.5.6</javax.mail.version>
+        
+        <!-- Cache - Guava 
+        <guava.version>19.0</guava.version>
+         -->
+         
+        <!-- Apache Bean Utils -->
+        <commons-beanutils.version>1.9.2</commons-beanutils.version>
+        
+        <!-- Spring Security -->
+        <spring-security.version>4.1.1.RELEASE</spring-security.version>
+        
+        <!-- Thymeleaf - Extras - SpringSecurity4 -->
+        <thymeleaf-extras-springsecurity.version>3.0.0.RELEASE</thymeleaf-extras-springsecurity.version>
     </properties>
     
     <build>
@@ -239,6 +267,85 @@
             <scope>compile</scope> 
         </dependency>                   
             
+        <!-- thumbnailator - Gerar Thumbnail  -->
+        <dependency>
+            <groupId>net.coobird</groupId>
+            <artifactId>thumbnailator</artifactId>
+            <version>${thumbnailator.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- thymeleaf extras data attribute -->
+        <dependency>
+            <groupId>com.github.mxab.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-data-attribute</artifactId>
+            <version>${thymeleaf-extras-data-attribute.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- JUnit -->
+	<dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+	</dependency>
+        
+        <!-- Java Mail -->
+		<dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+            <version>${javax.mail.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- Cache - Guava  
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        -->
+        
+        <!-- Spring Context Support -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- Apache Bean Utils -->
+        <dependency>
+            <groupId>commons-beanutils</groupId>
+            <artifactId>commons-beanutils</artifactId>
+            <version>${commons-beanutils.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- Spring Security -->
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring-security.version}</version>
+            <scope>compile</scope>
+        </dependency>
+         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring-security.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        
+        <!-- Thymeleaf - Extras - SpringSecurity4 -->
+        <dependency>
+            <groupId>org.thymeleaf.extras</groupId>
+            <artifactId>thymeleaf-extras-springsecurity4</artifactId>
+            <version>${thymeleaf-extras-springsecurity.version}</version>
+            <scope>compile</scope>
+        </dependency>
+
+        
     </dependencies>
     
 </project>
